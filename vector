@@ -1,0 +1,6 @@
+Sure, here's one possible rephrased version:
+
+"Transforms play a crucial role in modifying events as they pass through Vector. They may perform various operations such as parsing, filtering, sampling, or aggregating. You have the flexibility to incorporate any number of transforms in your pipeline."
+
+"The purpose of a source is to specify the origin of the data that Vector is supposed to retrieve, or the method by which data should be transmitted to Vector."
+"A sink serves as the endpoint for events, and the downstream service it interacts with determines the design and transmission method for each sink."
