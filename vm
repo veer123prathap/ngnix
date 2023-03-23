@@ -1,0 +1,9 @@
+If you are seeing random spikes in the graph after enabling deduplication in VictoriaMetrics with a scrape interval of 1 minute and deduplication of 1 minute, it could be due to several reasons.
+
+One possibility is that the deduplication process is removing valid data points that are within the 1-minute deduplication window. This could happen if the data points are not completely identical, but still represent the same metric. In this case, you may need to adjust the deduplication configuration to allow for some level of variance in the data points while still removing duplicate data points.
+
+Another possibility is that there are issues with the data itself. The data may contain anomalies or inconsistencies that are causing the random spikes in the graph. You can try to identify the root cause of these anomalies and address them before ingesting the data into VictoriaMetrics.
+
+It's also possible that the sampling interval is too large for the data being collected. If the data is highly variable and changes frequently within a 1-minute window, the deduplication process may not be able to accurately remove duplicate data points. In this case, you may need to decrease the sampling interval to get a more accurate representation of the data.
+
+In summary, seeing random spikes in the graph after enabling deduplication in VictoriaMetrics with a scrape interval of 1 minute and deduplication of 1 minute could be due to several reasons. It's important to ensure that the deduplication configuration is set up correctly and is tolerant of some variance in the data, that the data itself is free from anomalies and inconsistencies, and that the sampling interval is appropriate for the data being collected.
